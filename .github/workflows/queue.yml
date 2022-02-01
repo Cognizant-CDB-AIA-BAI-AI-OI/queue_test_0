@@ -1,8 +1,4 @@
-# This is a basic workflow that is manually triggered
-#openssl rsa -in publickey.pem -RSAPublicKey_in -pubout > id_pub.pem
-#files: '{ "file": "${{ github.workspace }}/top_secret.enc" }'
-
-name: getting data test
+name: adding to queue
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -14,9 +10,19 @@ jobs:
     steps:
     - name: Encrypt Stage
       run: |
-        echo "$PUBLIC_KEY" >> publickey.pem
+        echo "-----BEGIN PUBLIC KEY-----" > publickey.pem
+        echo "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApm/QUFY5iObVWXXnUzHb" >> publickey.pem
+        echo "P/zjFZOV+MmIdew0YvmT/VwPbdUXWE3V70ZrnINwzloXMBnlwYnRYncKP3oDxUpy" >> publickey.pem
+        echo "DeTxes5ha0PfJ6HUF3DcOrs003LwsGzrP+vQksf28s/5DZ9OJKke6299MhDs7qgc" >> publickey.pem
+        echo "nxAtTiJXJJMOIvscRJE/I8rOXoaAbS5iV2q9BD29Y8tE9qep90stgKtILTKSYM6P" >> publickey.pem
+        echo "+ckvm77KSQatl6xVpMWkTEy0VLm1va+eGNFrvRPJWxpEOWqZXuByWSZ8qJm2jvAK" >> publickey.pem
+        echo "2sbhX85oCghUf/VxCFx5CkU0nU398yW7ozgWmW/D5SuZ2c4qKE0eghhkUMj3sOjS" >> publickey.pem
+        echo "AQIDAQAB" >> publickey.pem
+        echo "-----END PUBLIC KEY-----" >> publickey.pem
+
         echo "${{ github.actor }}" > data.txt
         echo "${{ github.repository }}" >> data.txt
+        
         openssl rsautl -encrypt -inkey publickey.pem -pubin -in data.txt -out top_secret.enc
         openssl enc -base64 -in top_secret.enc -out secret.base64
         openssl dgst -sha256 data.txt > hashed.txt
