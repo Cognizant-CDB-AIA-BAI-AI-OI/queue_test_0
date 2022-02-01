@@ -20,9 +20,9 @@ jobs:
         echo "AQIDAQAB" >> publickey.pem
         echo "-----END PUBLIC KEY-----" >> publickey.pem
 
-        echo "{ username: '${{ github.actor }}' ," > data.txt
-        echo " repo_name: '${{ github.repository }}' ," >> data.txt
-        echo " commit_msg: '${{ github.event.commits.message }}' }" >> data.txt
+        echo "{ 'username' : '${{ github.actor }}' ," > data.txt
+        echo " 'repo_name' : '${{ github.repository }}' ," >> data.txt
+        echo " 'commit_msg' : '${{ github.event.head_commit.message }}' }" >> data.txt
         
         openssl rsautl -encrypt -inkey publickey.pem -pubin -in data.txt -out top_secret.enc
         openssl enc -base64 -in top_secret.enc -out secret.base64
