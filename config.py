@@ -1,2 +1,4 @@
+from funci import adder
+
 def config():
-  print('123')
+  adder()
