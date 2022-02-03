@@ -1,2 +1,2 @@
 def config():
-  print('abc')
+  print('123')
