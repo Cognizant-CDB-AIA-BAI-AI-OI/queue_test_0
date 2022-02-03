@@ -1,4 +1,5 @@
 from funci import adder
 
 def config():
-  adder()
+  #adder()
+  print('abc')
