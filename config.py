@@ -1,5 +1,5 @@
-#from funci import adder
+from funci import adder
 
 def config():
-  #adder()
-  print('123')
+  print('adding')
+  adder()
