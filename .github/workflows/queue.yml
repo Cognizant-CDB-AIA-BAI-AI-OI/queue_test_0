@@ -3,7 +3,7 @@ name: adding to queue
 on:
   push:
     branches:
-      - master
+      - 'master'
 
 jobs:
   deployment:
