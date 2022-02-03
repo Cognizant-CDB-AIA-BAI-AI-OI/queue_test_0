@@ -1,8 +1,9 @@
 name: adding to queue
 
-# Controls when the action will run. Workflow runs when manually triggered using the UI
-# or API.
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   deployment:
