@@ -2,4 +2,4 @@ from funci import adder
 
 def config():
   #adder()
-  print('abc')
+  print('123')
