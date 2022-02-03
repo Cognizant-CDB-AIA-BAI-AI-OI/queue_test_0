@@ -1,3 +1,4 @@
 def adder():
-  c  = 10+1
-  print('hoi ',c)
+  f = open('created.txt','w+')
+  f.write('hoi ')
+  f.close()
