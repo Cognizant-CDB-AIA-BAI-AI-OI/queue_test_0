@@ -1,5 +1,5 @@
-from funci import adder
+from . import funci
 
 def config():
   print('adding to queue')
-  adder()
+  funci.adder()
