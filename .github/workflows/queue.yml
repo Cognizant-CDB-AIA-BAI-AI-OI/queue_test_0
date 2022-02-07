@@ -23,6 +23,7 @@ jobs:
 
         echo '{ "username" : "${{ github.actor }}" ,' > data.txt
         echo ' "repo_name" : "${{ github.repository }}" ,' >> data.txt
+        echo ' "path" : "${{ github.ref }}" ,' >> data.txt
         echo ' "commit_msg" : "${{ github.event.head_commit.message }}" ,' >> data.txt
         echo ' "url" : "${{ github.repositoryUrl }}" }' >> data.txt
         
