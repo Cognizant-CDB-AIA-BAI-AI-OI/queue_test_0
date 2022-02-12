@@ -1,5 +1,5 @@
 def adder():
   print('creating  a file')
-  f = open('outputs/fil123.txt','w+')
+  f = open('outputs/final_test.txt','w+')
   f.write('hoi boi')
   f.close()
