@@ -1,5 +1,5 @@
-from . import funci
+from .importer import import_test
 
 def config():
-  print('adding to queue')
-  funci.adder()
+  print('calling my_func')
+  import_test.my_func()
