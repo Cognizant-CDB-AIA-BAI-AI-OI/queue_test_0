@@ -5,4 +5,3 @@ def config():
   import_test.my_func()
 
 
-  
