@@ -5,5 +5,5 @@ def my_func():
   print(df['Adverse Effects'][1])
   
   f = open('outputs/csv_out.txt','w+')
-  f.write(df['Adverse Effects'][0])
+  f.write(df1['Adverse Effects'][0])
   f.close()
