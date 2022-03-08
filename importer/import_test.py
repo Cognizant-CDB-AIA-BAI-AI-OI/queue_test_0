@@ -8,4 +8,4 @@ def my_func():
   f.write(df1['Adverse Effects'][0])
   f.close()
 
-  
+ 
