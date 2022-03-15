@@ -9,7 +9,7 @@ def s2t():
   
   print("curr path is: ",os.getcwd())
   
-  speech, rate = librosa.load('Harvard list 01.wav', sr=16000)
+  speech, rate = librosa.load('./queue_test_0/hubert/Harvard list 01.wav', sr=16000)
   
   input_values = processor(speech, return_tensors="pt", padding="longest", sampling_rate=rate).input_values
   logits = model(input_values).logits
