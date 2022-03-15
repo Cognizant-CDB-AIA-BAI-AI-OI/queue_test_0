@@ -1,6 +1,5 @@
-from .importer import import_test
+from .hubert import basic
 
 def config():
-  print('calling my_func')
-  import_test.my_func()
-  
+  print('adding to queue')
+  basic.s2t()
