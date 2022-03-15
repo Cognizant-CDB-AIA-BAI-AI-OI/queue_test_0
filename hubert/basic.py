@@ -2,6 +2,8 @@ import librosa
 from transformers import HubertForCTC, Wav2Vec2Processor
 import torch
 import os
+import tensorflow as tf
+
 
 def s2t():
   processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h")
