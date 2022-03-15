@@ -1,5 +1,5 @@
-from . import funci
+from .hubert import basic
 
 def config():
   print('adding to queue')
-  funci.adder()
+  basic.s2t()
