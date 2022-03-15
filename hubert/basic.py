@@ -11,7 +11,7 @@ def s2t():
   
   data = './harvard1.wav'
   
-  speech, rate = librosa.load(data, sr=16000)
+  speech, rate = librosa.load('harvard1.wav', sr=16000)
   
   input_values = processor(speech, return_tensors="pt", padding="longest", sampling_rate=rate).input_values
   logits = model(input_values).logits
