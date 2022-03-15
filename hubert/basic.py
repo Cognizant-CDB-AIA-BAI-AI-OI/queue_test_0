@@ -19,5 +19,5 @@ def s2t():
   print(transcription)
   
   f = open('outputs/converted.txt','w+')
-  f.write(transcription)
+  f.write(transcription[0])
   f.close()
