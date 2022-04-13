@@ -5,7 +5,7 @@ import os
 import tensorflow as tf
 
 def s2t():
-  processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h");
+  processor = Wav2Vec2Processor.from_pretrained("facebook/wav2vec2-base-960h"):
   model = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft") 
   
   print("number of gpus are: ",tf.test.is_gpu_available(cuda_only=True))
