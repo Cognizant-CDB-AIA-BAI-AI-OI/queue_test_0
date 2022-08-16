@@ -1,6 +1,7 @@
-from .hubert import basic
-
+#from .hubert import basic
+from funci import adder
 def config():
-  basic.s2t()
-
+  adder()
+#basic.s2t
+  
   
