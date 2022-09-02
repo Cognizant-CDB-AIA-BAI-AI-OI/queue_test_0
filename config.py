@@ -4,8 +4,6 @@ import subprocess
 def config():
   subprocess.run('source activate stats', shell=True)
   adder() 
-
-  
   
   
   
