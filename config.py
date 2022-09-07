@@ -4,7 +4,7 @@ import subprocess
 def config():
   #subprocess.run('conda init bash', shell = True)
   #subprocess.run('conda ~/root/.bashrc',shell = True)
-  subprocess.run('conda install -nstats', shell=True)
+  subprocess.run('conda install --stats', shell=True)
   adder() 
   
   
