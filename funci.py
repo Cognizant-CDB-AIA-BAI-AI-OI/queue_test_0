@@ -2,6 +2,7 @@ import time
 import subprocess
 def adder():
   print('creating  a file')
+  subprocess.run('conda init bash', shell = True)
   print(subprocess.run('conda activate stats', shell=True))
   print('comma')
   time.sleep(10)
