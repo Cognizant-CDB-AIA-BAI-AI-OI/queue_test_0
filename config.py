@@ -8,11 +8,7 @@ def config():
   #subprocess.run('conda activate stats', shell=True)
   adder() 
   
-  
-  
-  
-  
-  
+
   
   
   
