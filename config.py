@@ -17,6 +17,4 @@ def config():
   
   
   
-  
-  
 
