@@ -7,13 +7,7 @@ def config():
   #subprocess.run('conda env create -f environment.yml', shell=True)
   #subprocess.run('conda activate stats', shell=True)
   adder() 
-  
-  
-  
-  
-  
-  
-  
+ 
   
   
   
