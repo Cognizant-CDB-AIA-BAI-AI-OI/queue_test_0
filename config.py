@@ -9,11 +9,3 @@ def config():
   adder() 
 
   
-  
-  
-  
-  
-  
-  
-  
-  
