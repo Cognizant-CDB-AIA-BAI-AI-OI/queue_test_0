@@ -6,8 +6,8 @@ def config():
   
   #subprocess.run('conda env create -f environment.yml', shell=True)
   #subprocess.run('conda activate stats', shell=True)
-  subprocess.run('cd home/jupyter/Mukesh4/Queue',shell= True)
-  subprocess.run('rq worker --with-scheduler',shell =True)
+  #subprocess.run('cd home/jupyter/Mukesh4/Queue',shell= True)
+  #subprocess.run('rq worker --with-scheduler',shell =True)
   adder() 
 
   
