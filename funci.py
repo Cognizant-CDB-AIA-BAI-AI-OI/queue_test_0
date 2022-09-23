@@ -4,7 +4,7 @@ import os
 import openai
 import subprocess
 
-def adder():
+def adder() :
   print('creating  a file')
   time.sleep(10)
   print(subprocess.check_output(['conda','env', 'list']).decode())
@@ -15,5 +15,6 @@ def adder():
   #f.close()
   
   f.close()
+adder()
   
   
