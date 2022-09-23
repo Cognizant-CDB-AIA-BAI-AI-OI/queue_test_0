@@ -1,7 +1,7 @@
 import time
-import gradio as gr
+#import gradio as gr
 import os
-import openai
+#import openai
 import subprocess
 
 def adder() :
