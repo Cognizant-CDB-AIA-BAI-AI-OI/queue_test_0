@@ -1,0 +1,4 @@
+name: env5
+dependencies:
+  - numpy
+  - pandas
