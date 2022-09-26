@@ -1,0 +1,4 @@
+name: env4
+dependencies:
+  - numpy
+  - pandas
