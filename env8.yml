@@ -1,0 +1,4 @@
+name: env8
+dependencies:
+  - numpy
+  - pandas
