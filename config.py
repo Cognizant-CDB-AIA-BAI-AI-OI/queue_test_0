@@ -11,7 +11,7 @@ def config():
   #subprocess.run('conda run -n gradio python queue_test_0/funci.py',shell =True)
   #print('done')
   
-  
+ 
   #subprocess.run('conda env create -f environment.yml', shell=True)
   #subprocess.run('conda activate stats', shell=True)
   #subprocess.run('cd home/jupyter/Mukesh4/Queue',shell= True)
