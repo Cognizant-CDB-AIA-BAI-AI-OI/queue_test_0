@@ -5,9 +5,10 @@ import time
 def config():
   #subprocess.run('conda init bash', shell = True)
   print('config running')
-  subprocess.run('conda env create -f queue_test_0/env11.yml',shell =True)
-  time.sleep(100)
-  subprocess.run('conda run -n env11 python queue_test_0/funci.py',shell =True)
+  #subprocess.run('conda env create -f queue_test_0/env11.yml',shell =True)
+  #time.sleep(100)
+  #subprocess.run('conda run -n env11 python queue_test_0/funci.py',shell =True)
+  subprocess.run('conda run -n gradio python queue_test_0/funci.py',shell =True)
   print('done')
   #subprocess.run('conda env create -f environment.yml', shell=True)
   #subprocess.run('conda activate stats', shell=True)
