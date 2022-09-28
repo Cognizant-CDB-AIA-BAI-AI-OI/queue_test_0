@@ -1,5 +1,5 @@
-from .hubert import basic
-from .funci import adder
+#from .hubert import basic
+#from .funci import adder
 import subprocess
 import time
 def config():
@@ -16,7 +16,7 @@ def config():
   #subprocess.run('conda activate stats', shell=True)
   #subprocess.run('cd home/jupyter/Mukesh4/Queue',shell= True)
   #subprocess.run('rq worker --with-scheduler',shell =True)
-  adder() 
+  #adder() 
 
   
   
