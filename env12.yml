@@ -1,0 +1,4 @@
+name: env12
+dependencies:
+  - numpy
+  - pandas
