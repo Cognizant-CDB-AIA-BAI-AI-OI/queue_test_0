@@ -4,15 +4,35 @@ import os
 #import openai
 import subprocess
 
+import re
+import io
+import gzip
+import pandas as pd
+
 def adder() :
   print('creating  a file')
   #time.sleep(10)
   print(subprocess.check_output(['conda','env', 'list']).decode())
   print(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
+  def read_gzip_txt_file(file_path: str, encoding: str = 'utf-8') -> str:
+  """Read gzipped txt file."""
+    with open(file_path, 'rb') as f:
+      content = f.read()
+
+    with gzip.GzipFile(fileobj=io.BytesIO(content), mode='rb') as f:
+      content = f.read()
+    return content.decode(encoding)
+  content1=read_gzip_txt_file('./try_data/wikidata5m_text.txt.gz')
   f = open('outputs/a_test_dile.txt','w+')
-  f.write(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
-  #f.write('hi hello world')
+  f.write(len(content1))
   f.close()
+  
+  
+  
+  #f = open('outputs/a_test_dile.txt','w+')
+  #f.write(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
+  #f.write('hi hello world')
+  #f.close()
   
  
   #f.close()
