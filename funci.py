@@ -15,7 +15,7 @@ def adder() :
   print(subprocess.check_output(['conda','env', 'list']).decode())
   print(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
   def read_gzip_txt_file(file_path: str, encoding: str = 'utf-8') -> str:
-  """Read gzipped txt file."""
+  
     with open(file_path, 'rb') as f:
       content = f.read()
 
