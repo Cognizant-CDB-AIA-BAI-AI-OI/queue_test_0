@@ -3,13 +3,12 @@
 import subprocess
 import time
 def config():
-  #subprocess.run('conda init bash', shell = True)
+  
   print('config running')
-  subprocess.run('conda env create -f queue_test_0/env1.yml',shell =True)
-  time.sleep(100)
-  subprocess.run('conda run -n env1 python queue_test_0/funci.py',shell =True)
-  #subprocess.run('conda run -n gradio python queue_test_0/funci.py',shell =True)
-  #print('done')
+  subprocess.run('conda env create -f queue_test_0/env3.yml',shell =True)
+  time.sleep(150)
+  subprocess.run('conda run -n env3 python queue_test_0/funci.py',shell =True)
+  
   
  
   #subprocess.run('conda env create -f environment.yml', shell=True)
