@@ -1,0 +1,6 @@
+name: env3
+dependencies:
+  - numpy
+  - pandas
+  - boto3
+  
