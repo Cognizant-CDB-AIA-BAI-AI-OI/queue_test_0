@@ -16,8 +16,6 @@ def config():
   #subprocess.run('cd home/jupyter/Mukesh4/Queue',shell= True)
   #subprocess.run('rq worker --with-scheduler',shell =True)
   #adder() 
-
-  
   
   
   
