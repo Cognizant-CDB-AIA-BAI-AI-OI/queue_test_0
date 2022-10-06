@@ -22,7 +22,7 @@ def adder() :
     with gzip.GzipFile(fileobj=io.BytesIO(content), mode='rb') as f:
       content = f.read()
     return content.decode(encoding)
-  content1=read_gzip_txt_file('./try_data/wikidata5m_text.txt.gz')
+  content1=read_gzip_txt_file('/try_data/wikidata5m_text.txt.gz')
   f = open('outputs/a_test_dile.txt','w+')
   f.write(len(content1))
   f.close()
