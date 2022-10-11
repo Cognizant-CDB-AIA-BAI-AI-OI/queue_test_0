@@ -20,12 +20,7 @@ def config():
   #adder() 
   
   
-  
-  
-  
-  
-  
-  
+
   
 
   
