@@ -23,7 +23,7 @@ def adder() :
       content = f.read()
     return content.decode(encoding)
   content1=read_gzip_txt_file('queue_test_0/file.txt')
-  f = open('outputs/a_test_dile.txt','w+')
+  f = open('outputs/a_test_dile.txt','a+')
   f.write(str(len(content1)))
   f.close()
   
