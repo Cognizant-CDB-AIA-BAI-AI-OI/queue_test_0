@@ -14,6 +14,8 @@ def adder() :
   #time.sleep(10)
   print(subprocess.check_output(['conda','env', 'list']).decode())
   print(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
+  
+  
   def read_gzip_txt_file(file_path: str, encoding: str = 'utf-8') -> str:
   
     with open(file_path, 'rb') as f:
@@ -22,11 +24,18 @@ def adder() :
     with gzip.GzipFile(fileobj=io.BytesIO(content), mode='rb') as f:
       content = f.read()
     return content.decode(encoding)
-  content1=read_gzip_txt_file('queue_test_0/file.txt')
-  f = open('outputs/a_test_dile.txt','a+')
-  f.write(len(content1))
-  f.close()
   
+  try :
+    
+    content1=read_gzip_txt_file('queue_test_0/file.txt')
+    f = open('outputs/a_test_dile.txt','a+')
+    f.write(len(content1))
+    f.close()
+  except :
+    f = open('outputs/a_test_dile.txt','a+')
+    f.write(str(sys.exc_info()[0]))
+    f.close()
+    
   
   
   #f = open('outputs/a_test_dile.txt','w+')
