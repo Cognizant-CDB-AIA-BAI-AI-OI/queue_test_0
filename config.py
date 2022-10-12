@@ -15,6 +15,7 @@ def config():
   subprocess.run('conda run -n env3 python queue_test_0/funci.py',shell =True)
   
   
+  
  
 
 
