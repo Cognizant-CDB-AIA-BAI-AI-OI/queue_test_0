@@ -24,9 +24,16 @@ def config():
     f.write('Environment Created')
     f.close()
   
-    time.sleep(150)
-    subprocess.run('conda run -n env3 python queue_test_0/funci.py',shell =True)
-  
+    #time.sleep(150)
+    
+    try :
+      
+      subprocess.run('conda run -n env3 python queue_test_0/funci.py',shell =True)
+    
+    except :
+      f = open('outputs/a_test_dile.txt','a+')
+      f.write(str(sys.exc_info()[0]))
+      f.close()
   
   
   
