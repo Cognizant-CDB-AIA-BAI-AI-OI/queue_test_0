@@ -26,16 +26,16 @@ def adder() :
       content = f.read()
     return contents.decode(encoding)
   
-  try :
+  #try :
     
-    content1=read_gzip_txt_file('queue_test_0/file.txt')
-    f = open('outputs/a_test_dile.txt','a+')
-    f.write(str(len(content1)))
-    f.close()
-  except :
-    f = open('outputs/a_test_dile.txt','a+')
-    f.write(str(sys.exc_info()[0]))
-    f.close()
+  content1=read_gzip_txt_file('queue_test_0/file.txt')
+  f = open('outputs/a_test_dile.txt','a+')
+  f.write(str(len(content1)))
+  f.close()
+  #except :
+    #f = open('outputs/a_test_dile.txt','a+')
+    #f.write(str(sys.exc_info()[0]))
+    #f.close()
     
   
   
