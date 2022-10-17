@@ -24,7 +24,7 @@ def adder() :
 
     with gzip.GzipFile(fileobj=io.BytesIO(content), mode='rb') as f:
       content = f.read()
-    return contents.decode(encoding)
+    return content.decode(encoding)
   
   try :
     content1=read_gzip_txt_file('queue_test_0/file.txt')
