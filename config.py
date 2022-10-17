@@ -6,7 +6,7 @@ import time
 def config():
   
   print('config running')
-  """
+  
   try :
     import sys 
     subprocess.run('conda env create -f queue_test_0/env3.yml',shell =True)
@@ -34,7 +34,7 @@ def config():
       f = open('outputs/a_test_dile.txt','a+')
       f.write(str(sys.exc_info()[0]))
       f.close()
-  """
+  
 
  
 
