@@ -34,6 +34,20 @@ def config():
       f = open('outputs/a_test_dile.txt','a+')
       f.write(str(sys.exc_info()[0]))
       f.close()
+    
+    try :
+      
+      subprocess.run('conda env remove -n env3',shell =True)
+    
+    except :
+      f = open('outputs/a_test_dile.txt','a+')
+      f.write(str(sys.exc_info()[0]))
+      f.close()
+      
+    else :
+      f = open('outputs/a_test_dile.txt','w+')
+      f.write('Environment Deleted')
+      f.close()
   
 
  
