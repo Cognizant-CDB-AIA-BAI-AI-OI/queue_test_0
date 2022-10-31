@@ -11,9 +11,9 @@ import io
 import gzip
 import pandas as pd
 
-try :
+#try :
   @pysnooper.snoop('outputs/file.log')
-except :
+#except :
   f = open('outputs/a_test_dile.txt','a+')
   f.write(str(sys.exc_info()[0]))
   f.close()
