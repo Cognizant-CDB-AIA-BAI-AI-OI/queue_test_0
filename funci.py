@@ -1,3 +1,5 @@
+import pysnooper
+@pysnooper.snoop('outputs/file.log')
 import time
 #import gradio as gr
 import os
@@ -11,10 +13,10 @@ import gzip
 import pandas as pd
 
 def adder() :
-  print('creating  a file')
+  #print('creating  a file')
   #time.sleep(10)
-  print(subprocess.check_output(['conda','env', 'list']).decode())
-  print(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
+  #print(subprocess.check_output(['conda','env', 'list']).decode())
+  #print(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
   
   
   def read_gzip_txt_file(file_path: str, encoding: str = 'utf-8') -> str:
