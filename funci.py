@@ -11,6 +11,7 @@ import io
 import gzip
 import pandas as pd
 
+@pysnooper.snoop()
 
 def adder() :
   #print('creating  a file')
