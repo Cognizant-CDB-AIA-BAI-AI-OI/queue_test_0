@@ -24,7 +24,7 @@ def config():
     f.write('Environment Created')
     f.close()
   
-    #time.sleep(150)
+    time.sleep(150)
     
     try :
       
