@@ -1,5 +1,5 @@
 import pysnooper
-@pysnooper.snoop('outputs/file.log')
+#@pysnooper.snoop('outputs/file.log')
 import time
 #import gradio as gr
 import os
