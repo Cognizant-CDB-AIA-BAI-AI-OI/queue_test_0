@@ -28,7 +28,13 @@ def adder() :
     with gzip.GzipFile(fileobj=io.BytesIO(content), mode='rb') as f:
       content = f.read()
     return content.decode(encoding)
+
+  content1=read_gzip_txt_file('queue_test_0/file.txt')
+  f = open('outputs/a_test_dile.txt','a+')
+  f.write(str(len(content1)))
+  f.close()
   
+"""  
   try :
     content1=read_gzip_txt_file('queue_test_0/file.txt')
     f = open('outputs/a_test_dile.txt','a+')
@@ -46,7 +52,7 @@ def adder() :
   #f.write(subprocess.check_output("conda env list | grep '*'", shell=True, encoding='utf-8'))
   #f.write('hi hello world')
   #f.close()
-  
+"""  
  
   #f.close()
 adder()
