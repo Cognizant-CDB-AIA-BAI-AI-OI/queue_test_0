@@ -48,13 +48,7 @@ def config():
       f = open('outputs/a_test_dile.txt','a+')
       f.write('Environment Deleted')
       f.close()
-  
-
  
-
-
-
-
   
 
   
