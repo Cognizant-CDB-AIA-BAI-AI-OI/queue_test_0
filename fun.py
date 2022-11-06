@@ -5,8 +5,6 @@ import os
 import sys
 #import openai
 import subprocess
-
-import snoop
 import pysnooper
 import torch
 from transformers import T5ForConditionalGeneration, T5Tokenizer
