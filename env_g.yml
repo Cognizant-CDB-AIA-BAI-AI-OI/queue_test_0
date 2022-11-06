@@ -1,0 +1,8 @@
+name: env_g
+dependencies:
+  - numpy
+  - pandas
+  - boto3
+  - pytorch
+  - transformers
+  - pysnooper
