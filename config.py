@@ -9,7 +9,7 @@ def config():
   
   try :
     import sys 
-    subprocess.run('conda env create -f queue_test_0/env3.yml',shell =True)
+    subprocess.run('conda env create -f queue_test_0/env_g.yml',shell =True)
   
   except :
     
@@ -28,7 +28,7 @@ def config():
     
     try :
       
-      subprocess.run('conda run -n env3 python queue_test_0/funci.py',shell =True)
+      subprocess.run('conda run -n env_g python queue_test_0/fun.py',shell =True)
     
     except :
       f = open('outputs/a_test_dile.txt','a+')
@@ -37,7 +37,7 @@ def config():
     
     try :
       
-      subprocess.run('conda env remove -n env3',shell =True)
+      subprocess.run('conda env remove -n env_g',shell =True)
     
     except :
       f = open('outputs/a_test_dile.txt','a+')
