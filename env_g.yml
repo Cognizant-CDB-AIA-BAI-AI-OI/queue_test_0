@@ -6,3 +6,4 @@ dependencies:
   - pytorch
   - transformers
   - pysnooper
+  - sentencepiece
