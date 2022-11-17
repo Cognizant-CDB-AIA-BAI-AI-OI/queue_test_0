@@ -50,7 +50,4 @@ def config():
       f.close()
  
   
-
-  
-
  
