@@ -12,15 +12,19 @@ jobs:
     - name: Encrypt Stage
       run: |
         echo "-----BEGIN PUBLIC KEY-----" > publickey.pem
-        echo "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApm/QUFY5iObVWXXnUzHb" >> publickey.pem
-        echo "P/zjFZOV+MmIdew0YvmT/VwPbdUXWE3V70ZrnINwzloXMBnlwYnRYncKP3oDxUpy" >> publickey.pem
-        echo "DeTxes5ha0PfJ6HUF3DcOrs003LwsGzrP+vQksf28s/5DZ9OJKke6299MhDs7qgc" >> publickey.pem
-        echo "nxAtTiJXJJMOIvscRJE/I8rOXoaAbS5iV2q9BD29Y8tE9qep90stgKtILTKSYM6P" >> publickey.pem
-        echo "+ckvm77KSQatl6xVpMWkTEy0VLm1va+eGNFrvRPJWxpEOWqZXuByWSZ8qJm2jvAK" >> publickey.pem
-        echo "2sbhX85oCghUf/VxCFx5CkU0nU398yW7ozgWmW/D5SuZ2c4qKE0eghhkUMj3sOjS" >> publickey.pem
-        echo "AQIDAQAB" >> publickey.pem
+        echo "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA1jkVp6e3pZdGEOjlUrzn" >> publickey.pem
+        echo "9o4J7QTIhHkLhfnW6zq/vCNMM0ct4OMogxNvQaj7ssgYOpMgmpHZLi7rkSyfzEXK" >> publickey.pem
+        echo "3kx0i6AXLLh/9SD/nsL7qzoxuTTQ+rrFR0Wow4VTiiQDc/g13s+BLiWL84UOBz+Q" >> publickey.pem
+        echo "TKL2e5dHdHFBtxD6Mde9OOwt3LW4R7YI2qBRLCmXMhc7Ix7EilskjLyaDelnTwBb" >> publickey.pem
+        echo "ayRFA6nEs7ZOx9VrxemivJdGaB/uRyePtIWdtmiGRO5wqwiZLQwnESJhXXAulL7L" >> publickey.pem
+        echo "YZL2gYbspG6hOnnjOaIJQJuiE/z/i/54SRfKSallNZHHdiGS31Ze5x07Glo9L25d" >> publickey.pem
+        echo "VRokIzV+lwtJ/I4hSXIKrp+9eyEG4yhf7HRDuk5v3A1aeHBn2lgmNsNaE9Jd6SM9" >> publickey.pem
+        echo "JznXBYBLhwfkOS9sVCFhaQyTl8YTNiX4srzfq0qe9hHvGEoFYwlnVA8y60CqYT6j" >> publickey.pem
+        echo "HwAPJjTpw/47roGCaqVfDu7YwGLwLxf6etbyDwC1oe714M/m6lTxW5mx78q7Os7t" >> publickey.pem
+        echo "BhYhTe/0YzMx0ZxclN5dCRAkSoReHqm7YEglLX/C9SmzIbS2kNFAUVmFswrbswXk" >> publickey.pem
+        echo "lf6YVTHn4nxEG5kLxIxoPFRHsseAb3crg/NfQy0X0mSUisspMddLyI0KotyCer+i" >> publickey.pem
+        echo "4uhxc2ZmA2lBczyLImBAeq8CAwEAAQ==" >> publickey.pem
         echo "-----END PUBLIC KEY-----" >> publickey.pem
-
         echo '{ "username" : "${{ github.actor }}" ,' > data.txt
         echo ' "repo_name" : "${{ github.repository }}" ,' >> data.txt
         echo ' "path" : "${{ github.ref }}" ,' >> data.txt
@@ -29,7 +33,7 @@ jobs:
         
         openssl rsautl -encrypt -inkey publickey.pem -pubin -in data.txt -out top_secret.enc
         openssl enc -base64 -in top_secret.enc -out secret.base64
-        openssl dgst -sha256 data.txt > hashed.txt
+        openssl dgst -sha512 data.txt > hashed.txt
       env:
         PUBLIC_KEY: ${{ secrets.RSA_PUBLIC }}
         
@@ -59,4 +63,3 @@ jobs:
       
     - name: Echo response
       run: echo ${{ steps.posting.outputs.response }}
-
