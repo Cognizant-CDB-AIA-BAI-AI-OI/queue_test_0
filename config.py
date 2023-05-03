@@ -5,8 +5,10 @@ import time
 
 def config():
   
-  print('config running')
-  
+  print('config running in test')
+  time.sleep(30)
+  print('done with queue test repo!!')
+  '''
   try :
     import sys 
     subprocess.run('conda env create -f queue_test_0/env3.yml',shell =True)
@@ -49,5 +51,5 @@ def config():
       f.write('Environment Deleted')
       f.close()
  
-  
+  '''
  
