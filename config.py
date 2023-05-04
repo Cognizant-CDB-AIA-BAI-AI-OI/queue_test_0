@@ -52,6 +52,3 @@ def config():
       f.close()
  
   '''
-
-  
-  
