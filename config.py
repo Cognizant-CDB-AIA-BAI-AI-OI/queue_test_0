@@ -6,7 +6,7 @@ import time
 def config():
   
   print('config running in test')
-  time.sleep(100)
+  time.sleep(60)
   print('done with queue test repo!!')
   '''
   try :
